@@ -3,34 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Models\RandomNumber;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
 class RandomNumberController extends Controller
 {
-    public function generate(Request $request): \Illuminate\Http\JsonResponse
+    public function generate(Request $request): JsonResponse
     {
-        $randomNumber = mt_rand(1, 1000);
-        $uuid = Str::uuid();
+        $randomNumber = rand(1, 1000);
 
-        RandomNumber::create([
+        RandomNumber::query()->create([
                                  'number' => $randomNumber,
-                                 'uuid' => $uuid,
                              ]);
 
         return response()->json([
-                                    'uuid' => $uuid,
                                     'number' => $randomNumber,
                                 ], 201);
     }
 
-    public function retrieve($uuid)
+    public function retrieve($id): JsonResponse
     {
-        $randomNumber = RandomNumber::where('uuid', $uuid)->first();
+        $randomNumber = RandomNumber::query()->where('id', $id)->first();
 
         if ($randomNumber) {
             return response()->json([
-                                        'uuid' => $randomNumber->uuid,
                                         'number' => $randomNumber->number,
                                     ]);
         }
