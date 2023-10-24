@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  font-size: 24px; }
+  html .fa, body .fa {
+    font-weight: 900;
+    color: chartreuse; }
+  html .phone, body .phone {
+    font-weight: 900;
+    color: chartreuse; }
+  html .fa .phone, body .fa .phone {
+    font-family: "Font Awesome 5 Free", fantasy; }
+
+/*# sourceMappingURL=app.css.map */

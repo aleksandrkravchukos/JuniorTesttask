@@ -1,0 +1,203 @@
+table.dataTable thead th {
+  text-align: left;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px !important;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html .plus-button, body .plus-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #f0f0f0;
+  position: relative;
+  cursor: pointer;
+}
+html .plus-button::before,
+html .plus-button::after, body .plus-button::before,
+body .plus-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  background-color: #000;
+  transform: translate(-50%, -50%);
+}
+html .plus-button::before, body .plus-button::before {
+  transform-origin: center bottom;
+}
+html .plus-button::after, body .plus-button::after {
+  transform-origin: center top;
+}
+html .navigation, body .navigation {
+  display: flex;
+}
+html .vertical-menu, body .vertical-menu {
+  width: 200px;
+  background-color: #f2f2f2;
+}
+html .vertical-menu a, body .vertical-menu a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000;
+}
+html .vertical-menu a:hover, body .vertical-menu a:hover {
+  background-color: #ddd;
+}
+html .horizontal-menu, body .horizontal-menu {
+  flex-grow: 1;
+  background-color: #f2f2f2;
+}
+html .horizontal-menu a, body .horizontal-menu a {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000;
+}
+html .horizontal-menu a:hover, body .horizontal-menu a:hover {
+  background-color: #ddd;
+}
+html .top-panel, body .top-panel {
+  width: 100%;
+  background-color: lightgreen;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+html .main-content, body .main-content {
+  display: inline-block;
+  vertical-align: top;
+}
+html .content, body .content {
+  flex-grow: 2;
+  padding: 20px;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Font Awesome 5 Free", fantasy;
+  font-size: 24px;
+}
+html .content .row, body .content .row {
+  margin-top: 0 !important;
+}
+html .content .fa, body .content .fa {
+  font-weight: 900;
+  color: chartreuse;
+}
+html .content .phone, body .content .phone {
+  font-weight: 900;
+  color: chartreuse;
+}
+html .content .container, body .content .container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+html .content .form-group, body .content .form-group {
+  margin-bottom: 20px;
+}
+html .content label, body .content label {
+  display: block;
+  margin-bottom: 5px;
+  color: #888;
+}
+html .content input[type=text],
+html .content input[type=email],
+html .content input[type=password], body .content input[type=text],
+body .content input[type=email],
+body .content input[type=password] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+html .content button, body .content button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+html .content button:hover, body .content button:hover {
+  background-color: #45a049;
+}
+html .content .buttonUpdate,
+html .content .buttonCreate, body .content .buttonUpdate,
+body .content .buttonCreate {
+  cursor: pointer;
+  background-color: #75c88f;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  transition: background-color 0.3s ease;
+}
+html .content .buttonUpdate:hover,
+html .content .buttonCreate:hover, body .content .buttonUpdate:hover,
+body .content .buttonCreate:hover {
+  background-color: #5aaf6f;
+}
+html .content .buttonDelete, body .content .buttonDelete {
+  display: inline-block;
+  background-color: #75c88f;
+  border-radius: 5px;
+  border: none;
+  color: red;
+  text-align: center;
+  font-size: 13px;
+  padding: 5px 5px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+html .content .buttonDelete:hover, body .content .buttonDelete:hover {
+  background-color: #5aaf6f;
+}

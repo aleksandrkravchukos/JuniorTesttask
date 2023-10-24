@@ -1,0 +1,34 @@
+{
+    "private": true,
+    "type": "commonjs",
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.22.9",
+        "@babel/plugin-proposal-class-properties": "^7.18.6",
+        "@babel/preset-env": "^7.22.9",
+        "axios": "^1.4.0",
+        "babel-loader": "^9.1.3",
+        "laravel-mix": "^6.0.49",
+        "laravel-vite-plugin": "^0.7.5",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.63.6",
+        "sass-loader": "^12.6.0",
+        "vite": "^4.0.0",
+        "webpack": "^5.88.1"
+    },
+    "dependencies": {
+        "datatables.net": "^1.13.5",
+        "jquery": "^3.7.0",
+        "jquery-validation": "^1.19.5",
+        "json-stringify-safe": "^5.0.1",
+        "path": "^0.12.7",
+        "puppeteer": "^20.8.2",
+        "sweetalert2": "^11.7.18"
+    }
+}

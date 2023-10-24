@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Table Example</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+</head>
+<body>
+<table id="userTable" class="display">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Make</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Dummy data
+        let data = [
+            { id: 1, name: 'John', email: 'john@example.com', phone: '1234567890', make: 'Make A' },
+            { id: 2, name: 'Jane', email: 'jane@example.com', phone: '9876543210', make: 'Make B' },
+            { id: 3, name: 'Bob', email: 'bob@example.com', phone: '5555555555', make: 'Make C' }
+        ];
+
+        // Initialize DataTable
+        let table = $('#userTable').DataTable({
+            data: data,
+            columns: [
+                { data: 'id' },
+                { data: 'name' },
+                { data: 'email' },
+                { data: 'phone' },
+                { data: 'make' }
+            ]
+        });
+    });
+</script>
+</body>
+</html>
