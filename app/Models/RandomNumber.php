@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class RandomNumber extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'number',
+    ];
 }

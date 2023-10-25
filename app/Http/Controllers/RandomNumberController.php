@@ -3,22 +3,28 @@
 namespace App\Http\Controllers;
 
 use App\Models\RandomNumber;
+use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class RandomNumberController extends Controller
 {
-    public function generate(Request $request): JsonResponse
+    public function generate(Request $request): string
     {
         $randomNumber = rand(1, 1000);
 
-        RandomNumber::query()->create([
-                                 'number' => $randomNumber,
-                             ]);
+        try {
+            $randomRow = RandomNumber::query()->create([
+                                                           'number' => $randomNumber,
+                                                       ]);
 
-        return response()->json([
-                                    'number' => $randomNumber,
-                                ], 201);
+            return response()->json([
+                                        'randomNumber' => $randomNumber,
+                                        'uniqueId' => $randomRow->id,
+                                    ]);
+        } catch (Exception $exception) {
+            return $exception->getMessage();
+        }
     }
 
     public function retrieve($id): JsonResponse
@@ -27,7 +33,8 @@ class RandomNumberController extends Controller
 
         if ($randomNumber) {
             return response()->json([
-                                        'number' => $randomNumber->number,
+                                        'randomNumber' => $randomNumber->number,
+                                        'uniqueId' => $randomNumber->id,
                                     ]);
         }
 
