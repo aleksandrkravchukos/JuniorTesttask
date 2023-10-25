@@ -22,4 +22,10 @@ Install Docker.
 Route::post('/generate', 'RandomNumberController@generate');
 
 Route::get('/retrieve/{id}', 'RandomNumberController@retrieve');
+
+##POSTMAN EXAMPLE RESULT
+
+http://joxi.ru/823LVqECwEgv4A
+
+
     
