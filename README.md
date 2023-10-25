@@ -16,6 +16,7 @@ Install Docker.
     docker-compose up --build -d
     docker exec -it octarine_app composer install 
     cp .env.example .env 
+    docker exec -it octarine_app php artisan migrate
 
 ## routes 
 
