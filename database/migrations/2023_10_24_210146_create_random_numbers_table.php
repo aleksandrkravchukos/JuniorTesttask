@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('random_numbers', function (Blueprint $table) {
             $table->id();
             $table->string('number');
-            $table->string('uuid')->unique();
             $table->timestamps();
         });
     }
